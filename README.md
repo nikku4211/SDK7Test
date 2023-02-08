@@ -2,6 +2,7 @@
 Tests Libseven with a game of Pongchamp.
 
 ![Shiny circles](graphic/bitmap/colcirc.png)
+
 Graphics drawn by me, Nikku4211.
 
 ## Dependencies
