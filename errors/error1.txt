@@ -1,0 +1,242 @@
+In file included from ../subprojects/libtonc/include/tonc.h:18,
+                 from ../game/7test/src/main.c:5:
+../subprojects/libtonc/include/tonc_types.h:49: warning: "IWRAM_DATA" redefined
+   49 | #define IWRAM_DATA __attribute__((section(".iwram")))
+      |
+In file included from ../subprojects/sdk-seven/libseven/include/seven/base.h:22,
+                 from ../subprojects/sdk-seven/libseven/include/seven/prelude.h:10,
+                 from ../game/7test/src/main.c:1:
+../subprojects/sdk-seven/libseven/include/seven/base/attributes.h:27: note: this is the location of the previous definition
+   27 | #define IWRAM_DATA              IWRAM_SECTION(".data." _LIBSEVEN_SECCOUNT)
+      |
+../subprojects/libtonc/include/tonc_types.h:52: warning: "EWRAM_DATA" redefined
+   52 | #define EWRAM_DATA __attribute__((section(".ewram")))
+      |
+../subprojects/sdk-seven/libseven/include/seven/base/attributes.h:33: note: this is the location of the previous definition
+   33 | #define EWRAM_DATA              EWRAM_SECTION(".data." _LIBSEVEN_SECCOUNT)
+      |
+../subprojects/libtonc/include/tonc_types.h:55: warning: "EWRAM_BSS" redefined
+   55 | #define  EWRAM_BSS __attribute__((section(".sbss")))
+      |
+../subprojects/sdk-seven/libseven/include/seven/base/attributes.h:37: note: this is the location of the previous definition
+   37 |     #define EWRAM_BSS           SECTION(".sbss." _LIBSEVEN_SECCOUNT)
+      |
+../subprojects/libtonc/include/tonc_types.h:58: warning: "IWRAM_CODE" redefined
+   58 | #define IWRAM_CODE __attribute__((section(".iwram"), long_call))
+      |
+../subprojects/sdk-seven/libseven/include/seven/base/attributes.h:26: note: this is the location of the previous definition
+   26 | #define IWRAM_CODE              IWRAM_SECTION(".text." _LIBSEVEN_SECCOUNT) NOINLINE
+      |
+../subprojects/libtonc/include/tonc_types.h:61: warning: "EWRAM_CODE" redefined
+   61 | #define EWRAM_CODE __attribute__((section(".ewram"), long_call))
+      |
+../subprojects/sdk-seven/libseven/include/seven/base/attributes.h:32: note: this is the location of the previous definition
+   32 | #define EWRAM_CODE              EWRAM_SECTION(".text." _LIBSEVEN_SECCOUNT) NOINLINE
+      |
+../subprojects/libtonc/include/tonc_types.h:64: warning: "ALIGN" redefined
+   64 | #define ALIGN(n)        __attribute__((aligned(n)))
+      |
+../subprojects/sdk-seven/libseven/include/seven/base/attributes.h:15: note: this is the location of the previous definition
+   15 | #define ALIGN(n)                __attribute__((__aligned__(n)))
+      |
+../subprojects/libtonc/include/tonc_types.h:80: warning: "PACKED" redefined
+   80 | #define PACKED          __attribute__((packed))
+      |
+../subprojects/sdk-seven/libseven/include/seven/base/attributes.h:14: note: this is the location of the previous definition
+   14 | #define PACKED                  __attribute__((__packed__))
+      |
+In file included from ../subprojects/libtonc/include/tonc.h:19:
+../subprojects/libtonc/include/tonc_memmap.h:47: warning: "MEM_EWRAM" redefined
+   47 | #define MEM_EWRAM       0x02000000      //!< External work RAM
+      |
+In file included from ../subprojects/sdk-seven/libseven/include/seven/prelude.h:13:
+../subprojects/sdk-seven/libseven/include/seven/hw/memory.h:19: note: this is the location of the previous definition
+   19 | #define MEM_EWRAM               ((void*)0x02000000)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:48: warning: "MEM_IWRAM" redefined
+   48 | #define MEM_IWRAM       0x03000000      //!< Internal work RAM
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/memory.h:23: note: this is the location of the previous definition
+   23 | #define MEM_IWRAM               ((void*)0x03000000)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:49: warning: "MEM_IO" redefined
+   49 | #define MEM_IO          0x04000000      //!< I/O registers
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/memory.h:28: note: this is the location of the previous definition
+   28 | #define MEM_IO                  ((volatile void*)0x04000000)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:51: warning: "MEM_VRAM" redefined
+   51 | #define MEM_VRAM        0x06000000      //!< Video RAM. Note: no 8bit write !!
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/memory.h:37: note: this is the location of the previous definition
+   37 | #define MEM_VRAM                ((void*)0x06000000)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:52: warning: "MEM_OAM" redefined
+   52 | #define MEM_OAM         0x07000000      //!< Object Attribute Memory (OAM) Note: no 8bit write !!
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/memory.h:41: note: this is the location of the previous definition
+   41 | #define MEM_OAM                 ((void*)0x07000000)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:53: warning: "MEM_ROM" redefined
+   53 | #define MEM_ROM         0x08000000      //!< ROM. No write at all (duh)
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/memory.h:45: note: this is the location of the previous definition
+   45 | #define MEM_ROM                 ((const void*)0x08000000)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:54: warning: "MEM_SRAM" redefined
+   54 | #define MEM_SRAM        0x0E000000      //!< Static RAM. 8bit write only
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/memory.h:49: note: this is the location of the previous definition
+   49 | #define MEM_SRAM                ((void*)0x0E000000)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:85: warning: "REG_BASE" redefined
+   85 | #define REG_BASE                MEM_IO
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/memory.h:27: note: this is the location of the previous definition
+   27 | #define REG_BASE                ((volatile void*)0x04000000)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:278: warning: "REG_DISPCNT" redefined
+  278 | #define REG_DISPCNT                     *(vu32*)(REG_BASE+0x0000)       //!< Display control
+      |
+In file included from ../subprojects/sdk-seven/libseven/include/seven/prelude.h:14:
+../subprojects/sdk-seven/libseven/include/seven/hw/video.h:14: note: this is the location of the previous definition
+   14 | #define REG_DISPCNT     VOLADDR(0x04000000, u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:279: warning: "REG_DISPSTAT" redefined
+  279 | #define REG_DISPSTAT            *(vu16*)(REG_BASE+0x0004)       //!< Display status
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/video.h:15: note: this is the location of the previous definition
+   15 | #define REG_DISPSTAT    VOLADDR(0x04000004, u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:280: warning: "REG_VCOUNT" redefined
+  280 | #define REG_VCOUNT                      *(vu16*)(REG_BASE+0x0006)       //!< Scanline count
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/video.h:16: note: this is the location of the previous definition
+   16 | #define REG_VCOUNT      VOLADDR(0x04000006, const u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:285: warning: "REG_BGCNT" redefined
+  285 | #define REG_BGCNT                       ((vu16*)(REG_BASE+0x0008))      //!< Bg control array
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/video.h:17: note: this is the location of the previous definition
+   17 | #define REG_BGCNT       VOLARRAY(0x04000008, u16, 4)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:287: warning: "REG_BG0CNT" redefined
+  287 | #define REG_BG0CNT                      *(vu16*)(REG_BASE+0x0008)       //!< Bg0 control
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/video.h:18: note: this is the location of the previous definition
+   18 | #define REG_BG0CNT      VOLADDR(0x04000008, u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:288: warning: "REG_BG1CNT" redefined
+  288 | #define REG_BG1CNT                      *(vu16*)(REG_BASE+0x000A)       //!< Bg1 control
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/video.h:19: note: this is the location of the previous definition
+   19 | #define REG_BG1CNT      VOLADDR(0x0400000A, u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:289: warning: "REG_BG2CNT" redefined
+  289 | #define REG_BG2CNT                      *(vu16*)(REG_BASE+0x000C)       //!< Bg2 control
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/video.h:20: note: this is the location of the previous definition
+   20 | #define REG_BG2CNT      VOLADDR(0x0400000C, u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:290: warning: "REG_BG3CNT" redefined
+  290 | #define REG_BG3CNT                      *(vu16*)(REG_BASE+0x000E)       //!< Bg3 control
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/video.h:21: note: this is the location of the previous definition
+   21 | #define REG_BG3CNT      VOLADDR(0x0400000E, u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:469: warning: "REG_KEYINPUT" redefined
+  469 | #define REG_KEYINPUT            *(vu16*)(REG_BASE+0x0130)       //!< Key status (read only??)
+      |
+In file included from ../subprojects/sdk-seven/libseven/include/seven/prelude.h:11:
+../subprojects/sdk-seven/libseven/include/seven/hw/input.h:16: note: this is the location of the previous definition
+   16 | #define REG_KEYINPUT    VOLADDR(0x04000130, const u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:470: warning: "REG_KEYCNT" redefined
+  470 | #define REG_KEYCNT                      *(vu16*)(REG_BASE+0x0132)       //!< Key IRQ control
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/input.h:20: note: this is the location of the previous definition
+   20 | #define REG_KEYCNT      VOLADDR(0x04000132, u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:484: warning: "REG_IE" redefined
+  484 | #define REG_IE                          *(vu16*)(REG_BASE+0x0200)       //!< IRQ enable
+      |
+In file included from ../subprojects/sdk-seven/libseven/include/seven/prelude.h:12:
+../subprojects/sdk-seven/libseven/include/seven/hw/irq.h:20: note: this is the location of the previous definition
+   20 | #define REG_IE          VOLADDR(0x04000200, u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:485: warning: "REG_IF" redefined
+  485 | #define REG_IF                          *(vu16*)(REG_BASE+0x0202)       //!< IRQ status/acknowledge
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/irq.h:24: note: this is the location of the previous definition
+   24 | #define REG_IF          VOLADDR(0x04000202, u16)
+      |
+../subprojects/libtonc/include/tonc_memmap.h:487: warning: "REG_IME" redefined
+  487 | #define REG_IME                         *(vu16*)(REG_BASE+0x0208)       //!< IRQ master enable
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/irq.h:28: note: this is the location of the previous definition
+   28 | #define REG_IME         VOLADDR(0x04000208, u16)
+      |
+In file included from ../subprojects/libtonc/include/tonc.h:20:
+../subprojects/libtonc/include/tonc_memdef.h:158: warning: "BG_SIZE" redefined
+  158 | #define BG_SIZE(n)              ((n)<<BG_SIZE_SHIFT)
+      |
+../subprojects/sdk-seven/libseven/include/seven/hw/video.h:116: note: this is the location of the previous definition
+  116 |     #define BG_SIZE(n) BITFIELD(BG_SIZE, (n))
+      |
+In file included from ../subprojects/libtonc/include/tonc.h:23:
+../subprojects/libtonc/include/tonc_core.h:35: warning: "BIT" redefined
+   35 | #define BIT(n)                          ( 1<<(n) )
+      |
+In file included from ../subprojects/sdk-seven/libseven/include/seven/base.h:23:
+../subprojects/sdk-seven/libseven/include/seven/base/bits.h:10: note: this is the location of the previous definition
+   10 | #define BIT(n)                          (1 << (n))
+      |
+../subprojects/libtonc/include/tonc_core.h:58: warning: "BF_MASK" redefined
+   58 | #define BF_MASK(shift, len)             ( BIT_MASK(len)<<(shift) )
+      |
+../subprojects/sdk-seven/libseven/include/seven/base/bits.h:41: note: this is the location of the previous definition
+   41 | #define BF_MASK(name)                   \
+      |
+../subprojects/sdk-seven/libseven/include/seven/base/bits.h:13:51: error: expected ')' before '>>' token
+   13 | #define ROR(x, a)                       ((u32)(x) >> (a) | (u32)(x) << (32-(a)))
+      |                                                   ^~
+../subprojects/libtonc/include/tonc_core.h:112:12: note: in expansion of macro 'ROR'
+  112 | INLINE u32 ROR(u32 x, uint ror);
+      |            ^~~
+../subprojects/sdk-seven/libseven/include/seven/base/bits.h:13:51: error: expected ')' before '>>' token
+   13 | #define ROR(x, a)                       ((u32)(x) >> (a) | (u32)(x) << (32-(a)))
+      |                                                   ^~
+../subprojects/libtonc/include/tonc_core.h:416:12: note: in expansion of macro 'ROR'
+  416 | INLINE u32 ROR(u32 x, uint ror)
+      |            ^~~
+../subprojects/sdk-seven/libseven/include/seven/base/bits.h:20:5: error: expected declaration specifiers or '...' before '(' token
+   20 |     (((value) & BITS((BF_##name##_LENGTH))) << (BF_##name##_OFFSET))
+      |     ^
+../subprojects/sdk-seven/libseven/include/seven/hw/video/color.h:18:20: note: in expansion of macro 'BITFIELD'
+   18 | #define COLOR_R(n) BITFIELD(COLOR_R, (n))
+      |                    ^~~~~~~~
+../subprojects/sdk-seven/libseven/include/seven/hw/video/color.h:31:12: note: in expansion of macro 'COLOR_R'
+   31 |     ((u16)(COLOR_R((r)) | COLOR_G((g)) | COLOR_B((b))))
+      |            ^~~~~~~
+../subprojects/sdk-seven/libseven/include/seven/hw/video/color.h:34:5: note: in expansion of macro 'RGB5'
+   34 |     RGB5((r) >> 3, (g) >> 3, (b) >> 3)
+      |     ^~~~
+../subprojects/libtonc/include/tonc_video.h:186:14: note: in expansion of macro 'RGB8'
+  186 | INLINE COLOR RGB8(u8 red, u8 green, u8 blue);
+      |              ^~~~
+../subprojects/sdk-seven/libseven/include/seven/base/bits.h:20:5: error: expected declaration specifiers or '...' before '(' token
+   20 |     (((value) & BITS((BF_##name##_LENGTH))) << (BF_##name##_OFFSET))
+      |     ^
+../subprojects/sdk-seven/libseven/include/seven/hw/video/color.h:18:20: note: in expansion of macro 'BITFIELD'
+   18 | #define COLOR_R(n) BITFIELD(COLOR_R, (n))
+      |                    ^~~~~~~~
+../subprojects/sdk-seven/libseven/include/seven/hw/video/color.h:31:12: note: in expansion of macro 'COLOR_R'
+   31 |     ((u16)(COLOR_R((r)) | COLOR_G((g)) | COLOR_B((b))))
+      |            ^~~~~~~
+../subprojects/sdk-seven/libseven/include/seven/hw/video/color.h:34:5: note: in expansion of macro 'RGB5'
+   34 |     RGB5((r) >> 3, (g) >> 3, (b) >> 3)
+      |     ^~~~
+../subprojects/libtonc/include/tonc_video.h:381:14: note: in expansion of macro 'RGB8'
+  381 | INLINE COLOR RGB8(u8 red, u8 green, u8 blue)
+      |              ^~~~
+ninja: build stopped: subcommand failed.
